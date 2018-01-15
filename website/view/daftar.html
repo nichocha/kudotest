@@ -1,0 +1,52 @@
+{{template "header" .}}
+
+	<div class="container">
+		<h1>Daftar</h1>
+
+        {{if .Error_message}}
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				<strong>Error!</strong> {{.Error_message}}
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>        
+		{{end}}
+
+		<form method="POST">
+
+			<div class="form-group">
+				<label for="nama_pengguna">Nama Pengguna</label>
+				<input type="text" class="form-control" id="nama_pengguna" name="nama_pengguna" value="{{.Nama_pengguna}}">
+			</div>
+
+			<div class="form-group">
+				<label for="nama">Nama</label>
+				<input type="text" class="form-control" id="nama" name="nama" value="{{.Nama}}">
+			</div>
+
+			<div class="form-group">
+				<label for="surel">Alamat Surel</label>
+				<input type="email" class="form-control" id="surel" name="surel" value="{{.Surel}}">
+			</div>
+
+			<div class="form-group">
+				<label for="telepon">Telepon</label>
+				<input type="text" class="form-control" id="telepon" name="telepon" value="{{.Telepon}}">
+			</div>
+
+			<div class="form-group">
+				<label for="kata_sandi">Kata Sandi</label>
+				<input type="password" class="form-control" id="kata_sandi" name="kata_sandi">
+			</div>
+
+			<div class="form-group">
+				<label for="konfirmasi_kata_sandi">Konfirmasi Kata Sandi</label>
+				<input type="password" class="form-control" id="konfirmasi_kata_sandi" name="konfirmasi_kata_sandi">
+			</div>
+
+			<button class="btn btn-primary btn-full" name="proses" type="submit">Daftar</button>
+
+		</form>
+	</div>
+	
+{{template "footer" .}}

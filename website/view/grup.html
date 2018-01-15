@@ -1,0 +1,28 @@
+{{template "header" .}}
+
+	<div class="container">
+		<p><a href="grup/tambah" class="btn btn-primary" role="button" aria-pressed="true">Tambah</a></p>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Nama Grup</th>
+					<th scope="col">Deskripsi</th>
+					<th scope="col">Aksi</th>
+				</tr>
+			</thead>
+			<tbody>
+	   			{{range .Grups}}
+					<tr>
+						<td>{{.Nama_grup}}</td>
+						<td>{{.Deskripsi}}</td>
+						<td>
+							<a href="grup/ubah/{{.Id_grup}}" class="btn btn-success" role="button" aria-pressed="true">Ubah</a>
+							<a href="grup/hapus/{{.Id_grup}}" class="btn btn-danger" role="button" aria-pressed="true">Hapus</a>
+						</td>
+					</tr>
+	    		{{end}}
+			</tbody>
+		</table>
+	</div>
+	
+{{template "footer" .}}

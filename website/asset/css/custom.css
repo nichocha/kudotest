@@ -1,0 +1,12 @@
+.navbar-dark .navbar-nav .nav-link{
+	color: white;
+}
+
+.btn-full{
+	width: 100%;
+}
+
+.container{
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
